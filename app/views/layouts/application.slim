@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'jquery'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag 'custom'
+    = csrf_meta_tags
+  body
+    = render partial: "layouts/partials/main_header"
+    = render partial: "layouts/partials/flash_message"
+    .main
+      = yield

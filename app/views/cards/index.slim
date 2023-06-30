@@ -1,0 +1,4 @@
+div.container.mt-5.w-50 
+    = render partial: 'cards/partials/card_modal'
+    = render 'cards/partials/card_form', error_messages: @error_messages 
+    = render 'cards/partials/cards_list', items: @cards 

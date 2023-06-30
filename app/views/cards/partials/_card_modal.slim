@@ -1,0 +1,15 @@
+.modal.fade id="cardModal" role='dialog' aria-hidden='true' data-controller="card_modal"
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header.border-0
+        h4.modal-title = 'Title'
+      .modal-body
+        p = "body"
+      .modal-footer.border-0.pull-left
+        / = link_to t('migration_contract.cancel'), cancel_migration_contract_path(migration_contract),
+        /   remote: true,
+        /   method: :post,
+        /   class: "btn btn-danger",
+        /   data: { dismiss: 'modal' }
+        / button.btn.btn-link.mr-auto data-dismiss='modal'
+        /   u = t('migration_contract.keep')

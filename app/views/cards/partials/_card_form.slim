@@ -1,0 +1,17 @@
+= form_for :card, url: cards_path, class: "border p-3 mb-5" do |form|
+        - if @error_messages&.any?
+            div class="alert alert-danger alert-dismissible fade show"
+                ul
+                    - @error_messages.each do |message|
+                        li 
+                            = message
+
+        .div.form-outline
+            = form.label :title, "Title", class: "form-label"
+            = form.text_field :title, class: "form-control"
+        .div.form-outline
+            = form.label :description, "Description", class: "form-label"
+            = form.text_area :description, class: "form-control"
+
+        = form.submit "Create card", class: "btn btn-primary mt-3"
+end
